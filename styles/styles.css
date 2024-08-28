@@ -255,3 +255,126 @@ main .section.highlight {
   margin: 0;
   padding: 40px 0;
 }
+
+/* section anguilla hero */
+main .section.banner-anguilla-container {
+  margin: 0;
+  padding: 0;
+  background-image: url(../../icons/anguilla-banner-pic.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom center;
+  height: 580px;
+  position: relative;
+}
+main .section.banner-anguilla-container .banner-anguilla-wrapper {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 45%;
+  position: absolute;
+  max-width: 100%;
+  bottom: 0;
+  z-index: 1;
+}
+.banner-anguilla-wrapper .banner-anguilla {
+  height: 100%;
+  color: #fff;
+}
+.banner-anguilla-wrapper .banner-anguilla > div > div > p {
+  font-family: neue-helvetica, helvetica, sans-serif;
+  font-size: 0.8rem;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: .25em;
+  line-height: 1.5em;
+  text-transform: uppercase;
+}
+
+.banner-anguilla-wrapper .banner-anguilla em {
+  font-family: monotype-garamond, garamond, serif;
+  font-size: 1.125rem;
+  letter-spacing: .03em;
+  line-height: 1.5em;
+  text-transform: none;
+}
+.banner-anguilla-wrapper .banner-anguilla h2 {
+  font-family: neue-helvetica-extra-light, helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 200;
+  margin: 10px 0 23px;
+  text-transform: uppercase;
+  font-size: 2.75rem;
+  letter-spacing: .1363636364em;
+  line-height: 1.4090909091em;
+}
+.banner-anguilla-wrapper .banner-anguilla h2::after {
+  background-color: #fff;
+  content: "";
+  display: block;
+  height: 2px;
+  margin: 0 auto;
+  position: relative;
+  top: 8px;
+  width: 40px;
+  box-sizing: border-box;
+}
+.banner-anguilla-wrapper .banner-anguilla u {
+  bottom: 30px;
+  left: 30px;
+  right: auto;
+  transform: none;
+  display: block;
+  position: absolute;
+  text-align: center;
+  white-space: nowrap;
+  z-index: 2;
+}
+.banner-anguilla u {
+  background: none;
+  border: 0;
+  border-bottom: 1px solid #fff;
+  color: #fff;
+  cursor: pointer;
+  font-family: neue-helvetica-bold, helvetica, sans-serif;
+  font-size: .75rem;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: .25em;
+  line-height: 1.3333333333em;
+  padding: 0 0 3px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background-color .3s ease-out, color .3s ease-out, border-color .3s ease-out;
+}
+.banner-anguilla u:hover {
+  color: #999;
+}
+
+main .section.banner-anguilla-container::after {
+  background: linear-gradient(180deg,transparent 0,#000);
+  height: 50%;
+  width: 100%;
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+}
+@media (width >= 961px) {
+  .banner-anguilla-wrapper .banner-anguilla h2 {
+    font-size: 2.75rem;
+    letter-spacing: .1363636364em;
+    line-height: 1.4090909091em;
+  }
+}
+@media (961px >= width >= 701px) {
+  .banner-anguilla-wrapper .banner-anguilla h2 {
+    font-size: 2rem;
+    letter-spacing: .15625em;
+    line-height: 1.46875em;
+  }
+  .banner-anguilla-wrapper .banner-anguilla p {
+    display: inline-block;
+  }
+}

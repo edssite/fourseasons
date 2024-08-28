@@ -258,12 +258,12 @@ main .section.highlight {
 
 /* section anguilla hero */
 main .section.banner-anguilla-container {
-  margin: 0;
+  margin: 1rem 0 0;
   padding: 0;
   background-image: url(../../icons/anguilla-banner-pic.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: bottom center;
+  background-position: center center;
   height: 580px;
   position: relative;
 }
@@ -361,13 +361,22 @@ main .section.banner-anguilla-container::after {
   position: absolute;
   bottom: 0;
 }
-@media (width >= 961px) {
+@media (width >= 1701px) {
+  .banner-anguilla-wrapper .banner-anguilla h2 {
+    font-size: 4.5rem;
+    letter-spacing: .1388888889em;
+    line-height: 1.3888888889em;
+  }
+}
+
+@media (1701px >= width >= 961px) {
   .banner-anguilla-wrapper .banner-anguilla h2 {
     font-size: 2.75rem;
     letter-spacing: .1363636364em;
     line-height: 1.4090909091em;
   }
 }
+
 @media (961px >= width >= 701px) {
   .banner-anguilla-wrapper .banner-anguilla h2 {
     font-size: 2rem;

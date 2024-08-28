@@ -260,13 +260,14 @@ main .section.highlight {
 main .section.banner-anguilla-container {
   margin: 1rem 0 0;
   padding: 0;
-  background-image: url(../../icons/anguilla-banner-pic.jpg);
+  background-image: url("../../icons/anguilla-banner-pic.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
   height: 580px;
   position: relative;
 }
+
 main .section.banner-anguilla-container .banner-anguilla-wrapper {
   text-align: center;
   margin: 0;
@@ -278,10 +279,12 @@ main .section.banner-anguilla-container .banner-anguilla-wrapper {
   bottom: 0;
   z-index: 1;
 }
+
 .banner-anguilla-wrapper .banner-anguilla {
   height: 100%;
   color: #fff;
 }
+
 .banner-anguilla-wrapper .banner-anguilla > div > div > p {
   font-family: neue-helvetica, helvetica, sans-serif;
   font-size: 0.8rem;
@@ -299,6 +302,7 @@ main .section.banner-anguilla-container .banner-anguilla-wrapper {
   line-height: 1.5em;
   text-transform: none;
 }
+
 .banner-anguilla-wrapper .banner-anguilla h2 {
   font-family: neue-helvetica-extra-light, helvetica, sans-serif;
   font-style: normal;
@@ -306,9 +310,10 @@ main .section.banner-anguilla-container .banner-anguilla-wrapper {
   margin: 10px 0 23px;
   text-transform: uppercase;
   font-size: 2.75rem;
-  letter-spacing: .1363636364em;
-  line-height: 1.4090909091em;
+  letter-spacing: .1364em;
+  line-height: 1.409em;
 }
+
 .banner-anguilla-wrapper .banner-anguilla h2::after {
   background-color: #fff;
   content: "";
@@ -320,6 +325,7 @@ main .section.banner-anguilla-container .banner-anguilla-wrapper {
   width: 40px;
   box-sizing: border-box;
 }
+
 .banner-anguilla-wrapper .banner-anguilla u {
   bottom: 30px;
   left: 30px;
@@ -330,8 +336,8 @@ main .section.banner-anguilla-container .banner-anguilla-wrapper {
   text-align: center;
   white-space: nowrap;
   z-index: 2;
-}
-.banner-anguilla u {
+
+  /* button style */
   background: none;
   border: 0;
   border-bottom: 1px solid #fff;
@@ -342,12 +348,13 @@ main .section.banner-anguilla-container .banner-anguilla-wrapper {
   font-style: normal;
   font-weight: 700;
   letter-spacing: .25em;
-  line-height: 1.3333333333em;
+  line-height: 1.33em;
   padding: 0 0 3px;
   text-decoration: none;
   text-transform: uppercase;
   transition: background-color .3s ease-out, color .3s ease-out, border-color .3s ease-out;
 }
+
 .banner-anguilla u:hover {
   color: #999;
 }
@@ -361,28 +368,30 @@ main .section.banner-anguilla-container::after {
   position: absolute;
   bottom: 0;
 }
+
 @media (width >= 1701px) {
   .banner-anguilla-wrapper .banner-anguilla h2 {
     font-size: 4.5rem;
-    letter-spacing: .1388888889em;
-    line-height: 1.3888888889em;
+    letter-spacing: .139em;
+    line-height: 1.389em;
   }
 }
 
 @media (1701px >= width >= 961px) {
   .banner-anguilla-wrapper .banner-anguilla h2 {
     font-size: 2.75rem;
-    letter-spacing: .1363636364em;
-    line-height: 1.4090909091em;
+    letter-spacing: .136em;
+    line-height: 1.409em;
   }
 }
 
 @media (961px >= width >= 701px) {
   .banner-anguilla-wrapper .banner-anguilla h2 {
     font-size: 2rem;
-    letter-spacing: .15625em;
-    line-height: 1.46875em;
+    letter-spacing: .156em;
+    line-height: 1.469em;
   }
+
   .banner-anguilla-wrapper .banner-anguilla p {
     display: inline-block;
   }

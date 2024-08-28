@@ -1,10 +1,9 @@
 /* header and nav layout */
 header .nav-wrapper {
-  background-color: var(--background-color);
+  background-color: black;
   width: 100%;
   z-index: 2;
   position: fixed;
-  background-color: black;
 }
 
 header nav {
@@ -16,7 +15,6 @@ header nav {
   padding: 0 24px;
   font-family: var(--body-font-family);
   background-color: black;
-
   grid-template-rows: auto auto; /* Two rows: one for the top div and one for the bottom div */
   grid-template-columns: 1fr 1fr; /* Two columns for the top div */
   gap: 16px; /* Space between rows */
@@ -42,6 +40,7 @@ header nav[aria-expanded='true'] {
     max-width: 1264px;
     padding: 0 32px;
   }
+
   header nav[aria-expanded='true'] {
     min-height: 0;
     overflow: visible;
@@ -142,8 +141,7 @@ header nav[aria-expanded='true'] .nav-hamburger-icon::after {
 header .nav-brand {
   grid-column: 1 / 2; /* Place in the first column */
   grid-row: 1 / 2; /* Place in the first row */
-  align-self: start;
-  justify-self: start; /* Align to the left */
+  place-self: start start; /* Align to the left */
   font-size: var(--heading-font-size-l); /* Make the logo larger */
   font-weight: 700;
   line-height: 1;
@@ -162,14 +160,13 @@ header nav .nav-brand img {
 }
 
 .nav-brand h2 {
-  font-family: helvetica-light;
+  font-family: helvetica-light, sans-serif;
   font-size: x-large;
   padding-left: 20px;
   margin-top: 30px;
   color: white;
 }
 
-/* sections */
 /* sections */
 header nav .nav-sections {
   grid-column: 1 / 3; /* Span across both columns */
@@ -191,16 +188,16 @@ header nav .nav-sections ul > li {
   font-weight: 400;
   font-size: x-small;
   margin: 0 -5px; /* Adjusted space between each section */
-  padding: 5px 5px; /* Added padding to make it more like a button */
+  padding: 5px; /* Added padding to make it more like a button */
   background-color: black;
   color: white;
-  font-family: helvetica-medium;
-  border-radius: 0px;
+  font-family: helvetica-medium, sans-serif;
+  border-radius: 0;
   transition: color 0.3s ease; /* Smooth transition on hover */
-}
 
-header nav .nav-sections ul > li:hover {
-  color: rgb(178, 178, 178);
+  /* Optional: If you want the tiles to be the same width */
+  flex: 0 0 150px; /* Set a fixed width for each tile */
+  text-align: center; /* Center the text */
 }
 
 header nav .nav-sections ul > li > ul {
@@ -212,10 +209,8 @@ header nav .nav-sections ul > li > ul > li {
   color: black;
 }
 
-/* Optional: If you want the tiles to be the same width */
-header nav .nav-sections ul > li {
-  flex: 0 0 150px; /* Set a fixed width for each tile */
-  text-align: center; /* Center the text */
+header nav .nav-sections ul > li:hover {
+  color: rgb(178 178 178 / 100%);
 }
 
 
@@ -304,7 +299,6 @@ header nav .nav-tools {
   display: flex;
   align-items: center;
   position: relative; /* Make this element a positioning context for its children */
-
   grid-row: 1 / 2; /* Place it in the first row */
   grid-column: 2 / 3; /* Place it in the second column */
   justify-self: end; /* Align it to the right */

@@ -19,6 +19,63 @@
   display: block;
 }
 
+.columns.anchor-links {
+  margin: 6rem 0;
+}
+
+.columns.anchor-links a, .columns.anchor-links u {
+  background: none;
+  border: 0;
+  border-bottom: 1px solid #fff;
+  color: #000;
+  cursor: pointer;
+  /* font-family: neue-helvetica-bold, helvetica, sans-serif; */
+  font-size: .75rem;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: .25em;
+  line-height: 1.33em;
+  padding: 0;
+  display: inline;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-underline-offset: 3px;
+  text-underline-position: under;
+  white-space: nowrap;
+  transition: background-color .3s ease-out, color .3s ease-out, border-color .3s ease-out;
+}
+
+.columns.anchor-links a:hover, .columns.anchor-links u:hover{
+  text-decoration: underline;
+}
+
+.columns.anchor-links u {
+  border-left: 1px solid;
+  padding-left: 1.8rem;
+}
+
+.columns.anchor-links > div {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex: none;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  justify-content: center;
+  max-width: 100%;
+  flex-wrap: wrap;
+  margin: auto;
+  width: max-content;
+}
+
+.columns.anchor-links > div > .button-container {
+  flex: none;
+}
+
 @media (width >= 900px) {
   .columns > div {
     align-items: center;

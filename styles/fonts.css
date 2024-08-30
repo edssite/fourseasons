@@ -44,6 +44,14 @@
 }
 
 @font-face {
+  font-family: monotype-garamond-normal;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/monotype-garamond-normal.woff2') format('woff2');
+}
+
+@font-face {
   font-family: neue-helvetica-extra-light;
   font-style: normal;
   font-weight: 200;

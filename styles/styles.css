@@ -264,7 +264,7 @@ main .section.banner-anguilla-container {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  height: 580px;
+  height: 600px;
   position: relative;
 }
 
@@ -369,6 +369,153 @@ main .section.banner-anguilla-container::after {
   bottom: 0;
 }
 
+main .section.columns-container .default-content-wrapper {
+  max-width: 45%;
+}
+
+main .section.columns-container .default-content-wrapper > p {
+  font-family: monotype-garamond-normal, garamond, serif;
+  font-size: 1.375rem;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: .0227272727em;
+  line-height: 1.5em;
+  text-align: center;
+}
+
+main .section.columns-container .columns-wrapper .featured-offer {
+  max-width: 930px;
+  margin: 5rem auto 0;
+  justify-content: center;
+  border-top: 2px solid;
+  border-bottom: 2px solid;
+  padding: 0.3rem 0;
+  justify-self: center;
+}
+
+main .section.columns-container .columns-wrapper .featured-offer > div {
+    max-width: 930px;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    padding: 2rem 3rem;
+}
+
+main .section.columns-container .columns-wrapper .featured-offer > div p {
+  font-family: neue-helvetica, helvetica, sans-serif;
+  font-size: .625rem;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: .3em;
+  line-height: 1.3em;
+  text-transform: uppercase;
+}
+
+main .section.columns-container .columns-wrapper .featured-offer > div h2 {
+  font-family: neue-helvetica-bold, helvetica, sans-serif;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: .25em;
+    line-height: 1.3125em;
+    text-transform: uppercase;
+}
+
+main .section.columns-container .columns-wrapper .featured-offer > div h3 {
+  font-family: monotype-garamond-normal, garamond, serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.125rem;
+  letter-spacing: .0277777778em;
+  line-height: 1.5em;
+  margin-bottom: 2rem;
+}
+
+main .section.columns-container .columns-wrapper .featured-offer > div h4 a:first-child {
+  margin-right: 2rem;
+  align-items: center;
+  background-color: #000;
+  border: 1px solid #000;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-family: neue-helvetica, helvetica, sans-serif;
+  font-size: .625rem;
+  font-style: normal;
+  font-weight: 700;
+  justify-content: center;
+  letter-spacing: .3em;
+  line-height: 1.3em;
+  min-width: 130px;
+  padding: 12px 20px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  -webkit-transition: background-color .3s ease-out, color .3s ease-out, border-color .3s ease-out;
+  transition: background-color .3s ease-out, color .3s ease-out, border-color .3s ease-out;
+}
+
+main .section.columns-container .columns-wrapper .featured-offer > div h4 a {
+  font-family: neue-helvetica, helvetica, sans-serif;
+  font-size: .625rem;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: .3em;
+  line-height: 1.3em;
+  text-transform: uppercase;
+  color: #000;
+}
+
+main .section.spotlight {
+  height: 90vh;
+  max-height: 1000px;
+  min-height: 600px;
+  background-image: url("../../icons/spotlight-pic.jpg");
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+}
+
+main .section.spotlight::after {
+  height: 28%;
+  width: 100%;
+  bottom: 0;
+  content: "";
+  position: absolute;
+  z-index: 1;
+  background: linear-gradient(180deg, transparent 0, #000);
+  box-sizing: border-box;
+}
+
+main .section.spotlight .default-content-wrapper {
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 0 30px 30px;
+  display: block;
+  font-family: monotype-garamond-normal, garamond, serif;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: .0277777778em;
+  line-height: 1.5em;
+  z-index: 2;
+}
+main .section.spotlight .default-content-wrapper p:first-child {
+  font-family: neue-helvetica-bold, helvetica, sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: .25em;
+  line-height: 1.3125em;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
 @media (width >= 1701px) {
   .banner-anguilla-wrapper .banner-anguilla h2 {
     font-size: 4.5rem;
@@ -394,5 +541,9 @@ main .section.banner-anguilla-container::after {
 
   .banner-anguilla-wrapper .banner-anguilla p {
     display: inline-block;
+  }
+
+  main .section.spotlight::after {
+    height: 38%;
   }
 }

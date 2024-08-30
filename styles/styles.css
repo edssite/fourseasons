@@ -564,7 +564,6 @@ main .section.highlight .columns-wrapper {
 }
 
 main .section.highlight .columns-wrapper .columns div {
-  margin-bottom: 40px;
   padding-bottom: 60px;
   display: flex;
   -webkit-box-orient: horizontal;

@@ -501,7 +501,7 @@ main .section.spotlight .default-content-wrapper {
   font-size: 1.125rem;
   font-style: normal;
   font-weight: 400;
-  letter-spacing: .0277777778em;
+  letter-spacing: .0278em;
   line-height: 1.5em;
   z-index: 2;
 }
@@ -515,6 +515,122 @@ main .section.spotlight .default-content-wrapper p:first-child {
   margin-bottom: 10px;
   text-transform: uppercase;
 }
+
+main .section.textbox {
+  margin-bottom: 70px;
+  text-align: center;
+  padding: 0;
+}
+main .section.textbox .default-content-wrapper {
+  text-align: center;
+  display: block;
+  unicode-bidi: isolate;
+  color: #000;
+}
+
+main .section.textbox .default-content-wrapper h2 {
+  margin-bottom: 40px;
+  font-family: neue-helvetica-extra-light, helvetica, sans-serif;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 200;
+  letter-spacing: .167em;
+  line-height: 1.29em;
+  text-transform: uppercase;
+}
+
+main .section.textbox .default-content-wrapper p {
+  font-family: monotype-garamond-normal, garamond, serif;
+  font-size: 1.375rem;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: .023em;
+  line-height: 1.5em;
+  margin-bottom: 0;
+  margin-top: 0;
+  text-align: center;
+}
+
+main .section.highlight {
+  background-color: #fff;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 930px;
+}
+
+main .section.highlight .columns-wrapper {
+  padding: 0;
+  width: 100%;
+}
+
+main .section.highlight .columns-wrapper .columns div {
+  padding-bottom: 60px;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  flex-direction: row;
+  width: 100%;
+}
+
+main .section.highlight .columns-wrapper .columns div .columns-img-col {
+  width: 66%;
+  position: relative;
+}
+
+main .section.highlight .columns-wrapper .columns div div:nth-child(2) {
+  flex: none;
+  width: auto;
+  display: block;
+  width: 34%;
+}
+
+main .section.highlight .columns-wrapper .columns div:nth-child(2) {
+  flex-direction: row-reverse;
+}
+
+main .section.highlight .columns-wrapper .columns div:nth-child(4) {
+  flex-direction: row-reverse;
+}
+
+main .section.highlight .columns-wrapper .columns div div p {
+  margin-bottom: 1rem;
+}
+
+main .section.highlight .columns-wrapper .columns div div strong {
+  position: relative;
+  display: inline-block;
+  font-family: neue-helvetica-bold, helvetica, sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: .25em;
+  line-height: 1.3125em;
+  margin-bottom: 30px;
+  position: relative;
+  text-transform: uppercase;
+}
+
+main .section.highlight .columns-wrapper .columns div div p {
+  font-family: monotype-garamond-normal, garamond, serif;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: .0277777778em;
+  line-height: 1.5em;
+  margin: 0 0 30px;
+}
+
+main .section.highlight .columns-wrapper .columns div div strong::after {
+  left: 0;
+  right: inherit;
+  bottom: -20px;
+  border-bottom: 2px solid;
+  content: "";
+  position: absolute;
+  width: 40px;
+  box-sizing: border-box;
+}
+
 
 @media (width >= 1701px) {
   .banner-anguilla-wrapper .banner-anguilla h2 {

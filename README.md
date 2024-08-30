@@ -2,9 +2,8 @@
 Your project's description...
 
 ## Environments
-- Preview: https://main--{repo}--{owner}.hlx.page/
-- Live: https://main--{repo}--{owner}.hlx.live/
-
+- Preview: https://main--fourseasons--edssite.hlx.page/
+- Live: https://main--fourseasons--edssite.hlx.live/
 ## Installation
 
 ```sh

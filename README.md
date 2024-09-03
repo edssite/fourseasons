@@ -2,8 +2,12 @@
 Your project's description...
 
 ## Environments
+### Anguilla
 - Preview: https://main--fourseasons--edssite.hlx.page/
 - Live: https://main--fourseasons--edssite.hlx.live/
+### Jimbaranbay
+- Preview: https://main--fourseasons--edssite.hlx.page/jimbaranbay/
+- Live: https://main--fourseasons--edssite.hlx.live/jimbaranbay/
 ## Installation
 
 ```sh

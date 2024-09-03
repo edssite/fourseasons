@@ -1,6 +1,7 @@
 footer {
-  background-color: var(--light-color);
+  background-color: #000;
   font-size: var(--body-font-size-xs);
+  color: #fff;
 }
 
 footer .footer > div {
@@ -11,6 +12,108 @@ footer .footer > div {
 
 footer .footer p {
   margin: 0;
+}
+
+footer > div {
+  max-width: 1530px;
+  padding: 0 0 2rem 0;
+  margin: 0 auto;
+}
+
+footer .section.footer-col-container {
+  margin-bottom: 26px;
+}
+
+footer .section.footer-col-container .footer-col-wrapper .footer-col {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+footer .section.footer-col-container .footer-col-wrapper .footer-col h3 {
+  margin: 0 0 18px;
+  font-family: monotype-garamond, garamond, serif;
+  font-size: 1.125rem;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: .0278em;
+  line-height: 1.5em;
+}
+
+footer .section.footer-col-container .footer-col-wrapper .footer-col p {
+  font-size: .625rem;
+  cursor: pointer;
+  font-family: neue-helvetica, helvetica, sans-serif;
+  font-size: .75rem;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: .25em;
+  line-height: 1.334em;
+  padding: 0;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background-color .3s ease-out, color .3s ease-out, border-color .3s ease-out;
+  line-height: 2em;
+  margin-bottom: 20px;
+}
+
+footer .section.footer-copyright-container {
+  border-top: 1px solid;
+  padding-top: 1.5rem;
+}
+
+footer .section.footer-copyright-container .footer-copyright-wrapper .footer-copyright h4 {
+  font-size: .625rem;
+  letter-spacing: .078125rem;
+  text-decoration: none;
+  text-transform: none;
+  -webkit-transition: color .3s ease-out;
+  transition: color .3s ease-out;
+  font-family: neue-helvetica, helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.3em;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+footer .section.footer-copyright-container .footer-copyright-wrapper .footer-copyright p {
+  font-family: neue-helvetica, helvetica, sans-serif;
+  font-size: .625rem;
+  font-style: normal;
+  font-weight: 400;
+  color: #7d7d7d;
+  letter-spacing: .078rem;
+  line-height: 1.5em;
+  text-transform: none;
+}
+
+footer .section.footer-social-media-container .footer-social-media-wrapper .footer-social-media img {
+  width: 1.3rem;
+  height: auto;
+  background-color: #fff;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+footer .section.footer-logo-container {
+  margin-bottom: 105px;
+  text-align: center;
+}
+
+footer .section.footer-logo-container .footer-logo-wrapper .footer-logo {
+  background-image: url("../../icons/FS_Brand_Logo.svg");
+  width: 220px;
+  height: 102px;
+  margin: 0 auto;
+}
+
+@media (1701px >= width >= 961px) {
+  footer > div {
+    max-width: 930px;
+  }
 }
 
 @media (width >= 900px) {

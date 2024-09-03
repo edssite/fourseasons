@@ -268,7 +268,30 @@ main .section.banner-anguilla-container {
   position: relative;
 }
 
+main .section.banner-jimbaranbay-container {
+  margin: 1rem 0 0;
+  padding: 0;
+  background-image: url("../../icons/jimbaranbay-banner-pic.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 600px;
+  position: relative;
+}
+
 main .section.banner-anguilla-container .banner-anguilla-wrapper {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 45%;
+  position: absolute;
+  max-width: 100%;
+  bottom: 0;
+  z-index: 1;
+}
+
+main .section.banner-jimbaranbay-container .banner-jimbaranbay-wrapper {
   text-align: center;
   margin: 0;
   padding: 0;
@@ -285,6 +308,11 @@ main .section.banner-anguilla-container .banner-anguilla-wrapper {
   color: #fff;
 }
 
+.banner-jimbaranbay-wrapper .banner-jimbaranbay {
+  height: 100%;
+  color: #fff;
+}
+
 .banner-anguilla-wrapper .banner-anguilla > div > div > p {
   font-family: neue-helvetica, helvetica, sans-serif;
   font-size: 0.8rem;
@@ -295,7 +323,25 @@ main .section.banner-anguilla-container .banner-anguilla-wrapper {
   text-transform: uppercase;
 }
 
+.banner-jimbaranbay-wrapper .banner-jimbaranbay > div > div > p {
+  font-family: neue-helvetica, helvetica, sans-serif;
+  font-size: 0.8rem;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: .25em;
+  line-height: 1.5em;
+  text-transform: uppercase;
+}
+
 .banner-anguilla-wrapper .banner-anguilla em {
+  font-family: monotype-garamond, garamond, serif;
+  font-size: 1.125rem;
+  letter-spacing: .03em;
+  line-height: 1.5em;
+  text-transform: none;
+}
+
+.banner-jimbaranbay-wrapper .banner-jimbaranbay em {
   font-family: monotype-garamond, garamond, serif;
   font-size: 1.125rem;
   letter-spacing: .03em;
@@ -314,7 +360,30 @@ main .section.banner-anguilla-container .banner-anguilla-wrapper {
   line-height: 1.409em;
 }
 
+.banner-jimbaranbay-wrapper .banner-jimbaranbay h2 {
+  font-family: neue-helvetica-extra-light, helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 200;
+  margin: 10px 0 23px;
+  text-transform: uppercase;
+  font-size: 2.75rem;
+  letter-spacing: .1364em;
+  line-height: 1.409em;
+}
+
 .banner-anguilla-wrapper .banner-anguilla h2::after {
+  background-color: #fff;
+  content: "";
+  display: block;
+  height: 2px;
+  margin: 0 auto;
+  position: relative;
+  top: 8px;
+  width: 40px;
+  box-sizing: border-box;
+}
+
+.banner-jimbaranbay-wrapper .banner-jimbaranbay h2::after {
   background-color: #fff;
   content: "";
   display: block;
@@ -355,11 +424,54 @@ main .section.banner-anguilla-container .banner-anguilla-wrapper {
   transition: background-color .3s ease-out, color .3s ease-out, border-color .3s ease-out;
 }
 
+.banner-jimbaranbay-wrapper .banner-jimbaranbay u {
+  bottom: 30px;
+  left: 30px;
+  right: auto;
+  transform: none;
+  display: block;
+  position: absolute;
+  text-align: center;
+  white-space: nowrap;
+  z-index: 2;
+
+  /* button style */
+  background: none;
+  border: 0;
+  border-bottom: 1px solid #fff;
+  color: #fff;
+  cursor: pointer;
+  font-family: neue-helvetica-bold, helvetica, sans-serif;
+  font-size: .75rem;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: .25em;
+  line-height: 1.33em;
+  padding: 0 0 3px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background-color .3s ease-out, color .3s ease-out, border-color .3s ease-out;
+}
+
 .banner-anguilla u:hover {
   color: #999;
 }
 
+.banner-jimbaranbay u:hover {
+  color: #999;
+}
+
 main .section.banner-anguilla-container::after {
+  background: linear-gradient(180deg,transparent 0,#000);
+  height: 50%;
+  width: 100%;
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+}
+
+main .section.banner-jimbaranbay-container::after {
   background: linear-gradient(180deg,transparent 0,#000);
   height: 50%;
   width: 100%;
@@ -479,7 +591,28 @@ main .section.spotlight {
   position: relative;
 }
 
+main .section.spotlight-jimbaranbay {
+  height: 90vh;
+  max-height: 1000px;
+  min-height: 600px;
+  background-image: url("../../icons/jimbaranbay-spotlight-pic.jpg");
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+}
+
 main .section.spotlight::after {
+  height: 28%;
+  width: 100%;
+  bottom: 0;
+  content: "";
+  position: absolute;
+  z-index: 1;
+  background: linear-gradient(180deg, transparent 0, #000);
+  box-sizing: border-box;
+}
+
+main .section.spotlight-jimbaranbay::after {
   height: 28%;
   width: 100%;
   bottom: 0;
@@ -505,7 +638,35 @@ main .section.spotlight .default-content-wrapper {
   line-height: 1.5em;
   z-index: 2;
 }
+
+main .section.spotlight-jimbaranbay .default-content-wrapper {
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 0 30px 30px;
+  display: block;
+  font-family: monotype-garamond-normal, garamond, serif;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: .0278em;
+  line-height: 1.5em;
+  z-index: 2;
+}
+
 main .section.spotlight .default-content-wrapper p:first-child {
+  font-family: neue-helvetica-bold, helvetica, sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: .25em;
+  line-height: 1.3125em;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+main .section.spotlight-jimbaranbay .default-content-wrapper p:first-child {
   font-family: neue-helvetica-bold, helvetica, sans-serif;
   font-size: 1rem;
   font-style: normal;

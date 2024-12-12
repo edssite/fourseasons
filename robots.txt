@@ -1,0 +1,4 @@
+User-Agent: *
+Allow: /
+Disallow: /*?
+Sitemap: https://main--fourseasons--edssite.hlx.live/sitemap.xml

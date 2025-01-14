@@ -8,6 +8,8 @@ const placeholders = await fetchPlaceholders();
 // retrieve the value for key 'foo'
 const { label } = placeholders;
 
+console.log('label--------', label)
+
 
 
 

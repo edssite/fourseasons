@@ -7,6 +7,7 @@ import { fetchPlaceholders } from '/scripts/aem.js';
 const placeholders = await fetchPlaceholders();
 // retrieve the value for key 'foo'
 const { label } = placeholders;
+const { labelURL } = placeholders;
 
 console.log('label--------', label)
 
@@ -142,20 +143,30 @@ export default async function decorate(block) {
   const topNavContainer = document.createElement('div');
   topNavContainer.classList.add('top-nav-container');
 
-  // example: “Account” wrapper
-  const accountWrapper = document.createElement('div');
-  accountWrapper.classList.add('wrapper', 'account-wrapper');
+// example: “Account” wrapper
+const accountWrapper = document.createElement('div');
+accountWrapper.classList.add('wrapper', 'account-wrapper');
 
-  const accountIcon = document.createElement('img');
-  accountIcon.classList.add('account-icon');
-  accountIcon.alt = 'Account User Icon';
-  accountIcon.src = '/icons/account-user.svg'; // update path if needed
+// create the anchor
+const accountLink = document.createElement('a');
+accountLink.href = labelURL; // your link from placeholders
+accountLink.classList.add('account-link'); // optional, for styling
 
-  const accountText = document.createElement('span');
-  accountText.textContent = label;
+// create the icon
+const accountIcon = document.createElement('img');
+accountIcon.classList.add('account-icon');
+accountIcon.alt = 'Account User Icon';
+accountIcon.src = '/icons/account-user.svg'; // update path if needed
 
-  accountWrapper.append(accountIcon, accountText);
-  topNavContainer.appendChild(accountWrapper);
+// create the text
+const accountText = document.createElement('span');
+accountText.textContent = label;
+
+// nest icon + text inside the link
+accountLink.append(accountIcon, accountText);
+// and nest the link inside your wrapper
+accountWrapper.append(accountLink);
+
 
   // (Optional) Example: language wrapper
   // const languageWrapper = document.createElement('div');

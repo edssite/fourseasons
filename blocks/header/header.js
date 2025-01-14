@@ -1,6 +1,16 @@
 import { getMetadata } from '../../scripts/aem.js';
 import { loadFragment } from '../fragment/fragment.js';
 
+import { fetchPlaceholders } from '/scripts/aem.js';
+
+// fetch placeholders from the 'en' folder
+const placeholders = await fetchPlaceholders('label');
+// retrieve the value for key 'foo'
+const { label } = placeholders;
+
+
+
+
 // media query match that indicates mobile/tablet width
 const isDesktop = window.matchMedia('(min-width: 900px)');
 
@@ -113,11 +123,62 @@ export default async function decorate(block) {
   const navPath = navMeta ? new URL(navMeta, window.location).pathname : '/nav';
   const fragment = await loadFragment(navPath);
 
-  // decorate nav DOM
+  // clear any old content
   block.textContent = '';
+
+  // -- 1) CREATE YOUR TOP NAV WRAPPER --
+  const topNav = document.createElement('div');
+  // Give it some classes to style in header.css
+  topNav.classList.add('header-topnav');
+
+  // e.g. if you want Helix-like “data-block-name” attributes:
+  // topNav.classList.add('block');
+  // topNav.setAttribute('data-block-name', 'header-topnav');
+  // topNav.setAttribute('data-block-status', 'loaded');
+
+  // create .top-nav-container
+  const topNavContainer = document.createElement('div');
+  topNavContainer.classList.add('top-nav-container');
+
+  // example: “Account” wrapper
+  const accountWrapper = document.createElement('div');
+  accountWrapper.classList.add('wrapper', 'account-wrapper');
+
+  const accountIcon = document.createElement('img');
+  accountIcon.classList.add('account-icon');
+  accountIcon.alt = 'Account User Icon';
+  accountIcon.src = '/icons/account-user.svg'; // update path if needed
+
+  const accountText = document.createElement('span');
+  accountText.textContent = label;
+
+  accountWrapper.append(accountIcon, accountText);
+  topNavContainer.appendChild(accountWrapper);
+
+  // (Optional) Example: language wrapper
+  // const languageWrapper = document.createElement('div');
+  // languageWrapper.classList.add('wrapper', 'language-wrapper');
+  // const flagIcon = document.createElement('img');
+  // flagIcon.classList.add('flag-icon');
+  // flagIcon.alt = 'USA Flag Icon';
+  // flagIcon.src = '/icons/american-flag.png';
+  // const langText = document.createElement('span');
+  // langText.textContent = 'USA - EN';
+  // languageWrapper.append(flagIcon, langText);
+  // topNavContainer.appendChild(languageWrapper);
+
+  // finally, append .top-nav-container into topNav
+  topNav.appendChild(topNavContainer);
+
+  // add topNav to our block first
+  block.appendChild(topNav);
+
+  // -- 2) CREATE YOUR EXISTING NAV (unchanged code) --
   const nav = document.createElement('nav');
   nav.id = 'nav';
-  while (fragment.firstElementChild) nav.append(fragment.firstElementChild);
+  while (fragment.firstElementChild) {
+    nav.append(fragment.firstElementChild);
+  }
 
   const classes = ['brand', 'sections', 'tools'];
   classes.forEach((c, i) => {
@@ -126,7 +187,7 @@ export default async function decorate(block) {
   });
 
   const navBrand = nav.querySelector('.nav-brand');
-  const brandLink = navBrand.querySelector('.button');
+  const brandLink = navBrand?.querySelector('.button');
   if (brandLink) {
     brandLink.className = '';
     brandLink.closest('.button-container').className = '';
@@ -150,8 +211,8 @@ export default async function decorate(block) {
   const hamburger = document.createElement('div');
   hamburger.classList.add('nav-hamburger');
   hamburger.innerHTML = `<button type="button" aria-controls="nav" aria-label="Open navigation">
-      <span class="nav-hamburger-icon"></span>
-    </button>`;
+    <span class="nav-hamburger-icon"></span>
+  </button>`;
   hamburger.addEventListener('click', () => toggleMenu(nav, navSections));
   nav.prepend(hamburger);
   nav.setAttribute('aria-expanded', 'false');
@@ -159,8 +220,11 @@ export default async function decorate(block) {
   toggleMenu(nav, navSections, isDesktop.matches);
   isDesktop.addEventListener('change', () => toggleMenu(nav, navSections, isDesktop.matches));
 
+  // wrap nav in a container
   const navWrapper = document.createElement('div');
   navWrapper.className = 'nav-wrapper';
   navWrapper.append(nav);
+
+  // finally, append the nav below topNav
   block.append(navWrapper);
 }

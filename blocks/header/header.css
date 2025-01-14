@@ -332,3 +332,30 @@ header nav .nav-tools .default-content-wrapper .search-icon {
   font-size: 16px; /* Adjust size of the search icon */
   color: #999; /* Color of the search icon */
 }
+
+.header-topnav {
+  /* full-width black strip */
+  background-color: red;
+  color: white;
+}
+
+.header-topnav .top-nav-container {
+  /* horizontally pad a bit, center vertically */
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  /* if you want it right-aligned, add e.g.: */
+  justify-content: flex-end;
+}
+
+.header-topnav .account-wrapper {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.header-topnav .account-wrapper .account-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}

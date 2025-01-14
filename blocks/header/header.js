@@ -10,6 +10,7 @@ const { label } = placeholders;
 const { labelURL } = placeholders;
 
 console.log('label--------', label)
+console.log('labelURL--------', labelURL)
 
 
 
@@ -152,18 +153,13 @@ const accountLink = document.createElement('a');
 accountLink.href = labelURL; // your link from placeholders
 accountLink.classList.add('account-link'); // optional, for styling
 
-// create the icon
-const accountIcon = document.createElement('img');
-accountIcon.classList.add('account-icon');
-accountIcon.alt = 'Account User Icon';
-accountIcon.src = '/icons/account-user.svg'; // update path if needed
 
 // create the text
 const accountText = document.createElement('span');
 accountText.textContent = label;
 
 // nest icon + text inside the link
-accountLink.append(accountIcon, accountText);
+accountLink.append(accountText);
 // and nest the link inside your wrapper
 accountWrapper.append(accountLink);
 

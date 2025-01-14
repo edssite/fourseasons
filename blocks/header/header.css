@@ -336,27 +336,47 @@ header nav .nav-tools .default-content-wrapper .search-icon {
 
 /* ---- */
 
+/* top-nav strip */
 .header-topnav {
-  /* full-width black strip */
+  /* full-width strip */
   background-color: red;
   color: white;
 }
 
+/* container that holds “account” (and possibly “language” if you add it) */
 .header-topnav .top-nav-container {
-  /* horizontally pad a bit, center vertically */
   display: flex;
   align-items: center;
   padding: 0.5rem 1rem;
-  /* if you want it right-aligned, add e.g.: */
-  justify-content: flex-end;
+  justify-content: flex-end; /* right-aligned, change if needed */
 }
 
+/* wrapper for the account link & icon */
 .header-topnav .account-wrapper {
   display: flex;
   align-items: center;
-  cursor: pointer;
 }
 
+/* style the link so it’s clickable, remove default underlines, etc. */
+.header-topnav .account-wrapper a {
+  display: flex;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  /* if you want a pointer cursor: */
+  cursor: pointer;
+  /* add horizontal padding or spacing, if desired: */
+  padding: 0 0.5rem;
+  /* add a soft transition for color changes: */
+  transition: color 0.3s ease;
+}
+
+/* hover state for the account link */
+.header-topnav .account-wrapper a:hover {
+  color: #ccc; /* or any color you like */
+}
+
+/* icon dimensions & spacing */
 .header-topnav .account-wrapper .account-icon {
   width: 20px;
   height: 20px;

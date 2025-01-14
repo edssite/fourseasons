@@ -4,7 +4,7 @@ import { loadFragment } from '../fragment/fragment.js';
 import { fetchPlaceholders } from '/scripts/aem.js';
 
 // fetch placeholders from the 'en' folder
-const placeholders = await fetchPlaceholders('label');
+const placeholders = await fetchPlaceholders();
 // retrieve the value for key 'foo'
 const { label } = placeholders;
 

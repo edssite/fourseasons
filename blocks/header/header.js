@@ -167,6 +167,9 @@ accountLink.append(accountIcon, accountText);
 // and nest the link inside your wrapper
 accountWrapper.append(accountLink);
 
+// finally, attach it all into your top nav container
+topNavContainer.appendChild(accountWrapper);
+
 
   // (Optional) Example: language wrapper
   // const languageWrapper = document.createElement('div');
